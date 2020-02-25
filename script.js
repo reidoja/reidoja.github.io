@@ -1,8 +1,11 @@
 import Typed from 'typed.js';
 
 var options = {
-	strings: [ '<i>First</i> sentence.', '&amp; a second sentence.' ],
-	typeSpeed: 40
+	strings: [ 'I am Reinardus Ronaldo Raharja' ],
+	loop: true,
+	showCursor: false,
+	typeSpeed: 100,
+	backSpeed: 70
 };
 
-var typed = new Typed('.element', options);
+var typed = new Typed('.typing', options);
