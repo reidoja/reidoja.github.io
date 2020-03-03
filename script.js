@@ -48,6 +48,7 @@ const observer = new IntersectionObserver(function(entries) {
 		if (element.isIntersecting) {
 			const { child, percentage } = element.target.dataset;
 			calculate_bar(child, +percentage);
+			observer.unobserve(element.target);
 		}
 	});
 });
