@@ -14,7 +14,7 @@ var typed = new Typed('.typing', options);
 function calculate_bar(text, percentage) {
 	var className = '.circle-' + text;
 	var bar = new ProgressBar.Circle(className, {
-		color: '#00ffff',
+		color: '#12f2dd',
 		// This has to be the same size as the maximum width to
 		// prevent clipping
 		strokeWidth: 4,
@@ -22,8 +22,8 @@ function calculate_bar(text, percentage) {
 		text: {
 			autoStyleContainer: false
 		},
-		from: { color: '#00ffff', width: 1 },
-		to: { color: '#00ffff', width: 3 },
+		from: { color: '#12f2dd', width: 1 },
+		to: { color: '#12f2dd', width: 3 },
 		// Set default step function for all animate calls
 		step: function(state, circle) {
 			circle.path.setAttribute('stroke', state.color);
@@ -73,4 +73,19 @@ function calculate_age(dob) {
 	var age_dt = new Date(diff_ms);
 
 	return Math.abs(age_dt.getUTCFullYear() - 1970);
+}
+
+function showExperience() {
+	var experiences = [
+		{ title: 'Activist at Bina Nusantara Computer Club (BNCC)', year: 'October 2019' },
+		{ title: 'Full Time Laboratory Assistant at Binus Alam Sutera', year: 'Februari 2019' },
+		{ title: 'Scholarship Mentor at Binus Alam Sutera', year: 'October 2019' }
+	];
+	var experienceContainer = document.getElementsByClassName('experience-detail');
+	var experience = '';
+	experiences.forEach((exp) => {
+		experience += `
+			
+		`;
+	});
 }

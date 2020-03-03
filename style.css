@@ -3,7 +3,6 @@
 	margin: 0;
 	font-family: montserrat;
 }
-
 body {
 	box-sizing: border-box;
 	width: 100%;
@@ -126,13 +125,6 @@ body {
 	height: 100%;
 }
 
-#container {
-	margin: 20px;
-	width: 200px;
-	height: 200px;
-	position: relative;
-}
-
 .profile {
 	width: 100%;
 	height: 100vh;
@@ -197,7 +189,7 @@ body {
 	align-items: center;
 	box-sizing: border-box;
 	height: 20%;
-	color: rgb(0, 255, 255);
+	color: rgb(18, 242, 221);
 }
 .skill-detail {
 	width: 100%;
@@ -218,6 +210,29 @@ body {
 	width: 50%;
 	height: auto;
 	position: relative;
+}
+
+.experiences {
+	width: 100%;
+	height: 100vh;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	box-sizing: border-box;
+}
+
+.experiences-container {
+	width: 90%;
+	height: 90%;
+	border: 2px solid rgb(52, 150, 150);
+}
+
+.experience-title {
+	display: flex;
+	justify-content: center;
+	height: 20%;
+	align-items: center;
+	color: rgb(0, 255, 255);
 }
 
 @keyframes rotate {
