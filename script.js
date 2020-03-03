@@ -43,12 +43,25 @@ function calculate_bar(text, percentage) {
 	bar.animate(percentage);
 }
 
-calculate_bar('html', 0.8);
-calculate_bar('js', 0.75);
-calculate_bar('c', 0.85);
-calculate_bar('php', 0.75);
-calculate_bar('java', 0.85);
-calculate_bar('react', 0.7);
+const observer = new IntersectionObserver(function(entries) {
+	entries.forEach((element) => {
+		if (element.isIntersecting) {
+			const { child, percentage } = element.target.dataset;
+			calculate_bar(child, +percentage);
+		}
+	});
+});
+
+Array.from(document.getElementsByClassName('circle')).forEach((el) => {
+	observer.observe(el);
+});
+
+// calculate_bar('html', 0.8);
+// calculate_bar('js', 0.75);
+// calculate_bar('c', 0.85);
+// calculate_bar('php', 0.75);
+// calculate_bar('java', 0.85);
+// calculate_bar('react', 0.7);
 
 var age = document.getElementById('age');
 
