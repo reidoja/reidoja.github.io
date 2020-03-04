@@ -3,6 +3,11 @@
 	margin: 0;
 	font-family: montserrat;
 }
+
+html {
+	scroll-behavior: smooth;
+}
+
 body {
 	box-sizing: border-box;
 	width: 100%;
@@ -24,7 +29,7 @@ body {
 
 .intro-card {
 	font-size: 40px;
-	width: 40%;
+	width: 50%;
 	height: 30%;
 	display: flex;
 	align-items: center;
@@ -32,7 +37,7 @@ body {
 	text-align: center;
 	color: rgb(88, 216, 216);
 }
-.nav {
+.nav-web {
 	position: absolute;
 	z-index: 100;
 	width: 100%;
@@ -205,6 +210,7 @@ body {
 	flex-direction: column;
 	align-items: center;
 	text-align: center;
+	justify-content: center;
 }
 .circle {
 	width: 50%;
@@ -254,6 +260,12 @@ body {
 
 .experience-year {
 	color: rgb(18, 242, 221);
+}
+
+@media only screen and (max-width: 650px) {
+	.nav-web {
+		display: none;
+	}
 }
 
 @keyframes rotate {
