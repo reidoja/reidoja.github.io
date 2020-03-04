@@ -77,15 +77,25 @@ function calculate_age(dob) {
 
 function showExperience() {
 	var experiences = [
-		{ title: 'Activist at Bina Nusantara Computer Club (BNCC)', year: 'October 2019' },
-		{ title: 'Full Time Laboratory Assistant at Binus Alam Sutera', year: 'Februari 2019' },
-		{ title: 'Scholarship Mentor at Binus Alam Sutera', year: 'October 2019' }
+		{ name: 'Activist at Bina Nusantara Computer Club (BNCC)', year: 'October 2019' },
+		{ name: 'Full Time Laboratory Assistant at Binus Alam Sutera', year: 'Februari 2019' },
+		{ name: 'Scholarship Mentor at Binus Alam Sutera', year: 'October 2019' }
 	];
-	var experienceContainer = document.getElementsByClassName('experience-detail');
 	var experience = '';
 	experiences.forEach((exp) => {
 		experience += `
-			
+		<div class="experience">
+			<div class="experience-name">
+				<h2>${exp.name}</h2>
+			</div>
+			<div class="experience-year">
+				<h3>${exp.year}</h3>
+			</div>
+		</div>
 		`;
 	});
+
+	document.querySelector('.experience-detail').innerHTML = experience;
 }
+
+showExperience();

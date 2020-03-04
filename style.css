@@ -222,9 +222,9 @@ body {
 }
 
 .experiences-container {
-	width: 90%;
+	width: 60%;
 	height: 90%;
-	border: 2px solid rgb(52, 150, 150);
+	color: rgb(0, 255, 255);
 }
 
 .experience-title {
@@ -232,7 +232,28 @@ body {
 	justify-content: center;
 	height: 20%;
 	align-items: center;
-	color: rgb(0, 255, 255);
+}
+
+.experience-detail {
+	height: auto;
+	width: 100%;
+	box-sizing: border-box;
+	display: flex;
+	flex-direction: column;
+}
+
+.experience {
+	margin: 2%;
+	border: 2px solid rgb(52, 150, 150);
+}
+
+.experience-name,
+.experience-year {
+	padding: 2%;
+}
+
+.experience-year {
+	color: rgb(18, 242, 221);
 }
 
 @keyframes rotate {
