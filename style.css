@@ -266,8 +266,20 @@ body {
 	.nav-web {
 		display: none;
 	}
-	.skill {
+	.profile-title,
+	.skill-title,
+	.experience-title {
 		font-size: 12px;
+	}
+	h2 {
+		font-size: 18.72px;
+	}
+	h3 {
+		font-size: 16px;
+	}
+	.experience-name,
+	.experience-year {
+		padding: 5%;
 	}
 }
 
