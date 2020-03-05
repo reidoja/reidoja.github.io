@@ -266,6 +266,9 @@ body {
 	.nav-web {
 		display: none;
 	}
+	.skill {
+		font-size: 12px;
+	}
 }
 
 @keyframes rotate {
