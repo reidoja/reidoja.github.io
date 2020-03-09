@@ -77,6 +77,7 @@ function calculate_age(dob) {
 
 function showExperience() {
 	var experiences = [
+		{ name: 'Student Council (OSIS)', year: 'February 2017' },
 		{ name: 'Activist at Bina Nusantara Computer Club (BNCC)', year: 'October 2019' },
 		{ name: 'Full Time Laboratory Assistant at Binus Alam Sutera', year: 'Februari 2019' },
 		{ name: 'Scholarship Mentor at Binus Alam Sutera', year: 'October 2019' }
