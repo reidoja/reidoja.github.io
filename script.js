@@ -68,19 +68,39 @@ var age = document.getElementById('age');
 
 age.innerHTML = calculate_age(new Date(2000, 5, 30));
 
-function calculate_age(dob) {
-	var diff_ms = Date.now() - dob.getTime();
-	var age_dt = new Date(diff_ms);
+// function calculate_age(dob) {
+// 	var diff_ms = Date.now() - dob.getTime();
+// 	var age_dt = new Date(diff_ms);
 
-	return Math.abs(age_dt.getUTCFullYear() - 1970);
+// 	return Math.abs(age_dt.getUTCFullYear() - 1970);
+// }
+
+function calculate_age(dateString) {
+	var today = new Date();
+	var birthDate = new Date(dateString);
+	var age = today.getFullYear() - birthDate.getFullYear();
+	var m = today.getMonth() - birthDate.getMonth();
+	if (m < 0 || (m === 0 && today.getDate() < birthDate.getDate())) {
+		age--;
+	}
+	return age;
 }
 
 function showExperience() {
 	var experiences = [
 		{ name: 'Student Council (OSIS)', year: 'February 2017' },
-		{ name: 'Activist at Bina Nusantara Computer Club (BNCC)', year: 'October 2019' },
-		{ name: 'Full Time Laboratory Assistant at Binus Alam Sutera', year: 'Februari 2019' },
-		{ name: 'Scholarship Mentor at Binus Alam Sutera', year: 'October 2019' }
+		{
+			name: 'Activist at Bina Nusantara Computer Club (BNCC)',
+			year: 'October 2019'
+		},
+		{
+			name: 'Full Time Laboratory Assistant at Binus Alam Sutera',
+			year: 'Februari 2019'
+		},
+		{
+			name: 'Scholarship Mentor at Binus Alam Sutera',
+			year: 'October 2019'
+		}
 	];
 	var experience = '';
 	experiences.forEach((exp) => {
